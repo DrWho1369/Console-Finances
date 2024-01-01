@@ -100,6 +100,7 @@ const resultsEl = document.getElementById("results-el")
 const displayEl = document.getElementById("display-el")
 const datasetEl = document.getElementById("dataset-el")
 
+let months = 0
 let totalDollars = 0
 let changes = 0
 let averageChange = 0
@@ -120,23 +121,28 @@ let dataDisplayed = false
 //-------------------------------------------------------//
 
 monthsEl.addEventListener("click", function() {
-  calculateMonths()
+  calculateMonths();
+  console.log(`The total length of this finacial period is: ${months} months`)
 })
 
 totalEl.addEventListener("click", function() {
-  calculateTotal()
+  calculateTotal();
+  console.log(`The total profit/loss over this period is $${totalDollars}`)
 })
 
 averageEl.addEventListener("click", function() {
-  calculateAverage()
+  calculateAverage();
+  console.log(`The average change over the financial period is $${averageChange}`)
 })
 
 increaseEl.addEventListener("click", function() {
-  calculateBiggestIncrease()
+  calculateBiggestIncrease();
+  console.log(`The Greatest Increase is: ${biggestMonth} ($${biggestNumber})`)
 })
 
 decreaseEl.addEventListener("click", function() {
-  calculateBiggestDecrease()
+  calculateBiggestDecrease();
+  console.log(`The Greatest Decrease is: ${smallestMonth} ($${smallestNumber})`)
 })
 
 displayEl.addEventListener("click", function() {
@@ -149,9 +155,8 @@ displayEl.addEventListener("click", function() {
 
 
 function calculateMonths() {
-  let months = finances.length;
+  months = finances.length;
   resultsEl.textContent = `The total length of this finacial period is: ${months} months`
-  console.log(`The total length of this finacial period is: ${months} months`)
 }
 
 function calculateTotal() {
@@ -165,8 +170,7 @@ function calculateTotal() {
     greatestIncrease = false
     greatestDecrease = false
     dataDisplayed = false
-    console.log(`The total profit/loss over this period is $${totalDollars}`)
-  }
+}
 
 
 function calculateAverage() {
@@ -182,7 +186,6 @@ function calculateAverage() {
     greatestDecrease = false
     dataDisplayed = false
   }
-  console.log(`The average change over the financial period is $${averageChange}`)
 }
 
 
@@ -202,7 +205,6 @@ function calculateBiggestIncrease() {
     greatestDecrease = false
     dataDisplayed = false
   }
-  console.log(`The Greatest Increase is: ${biggestMonth} ($${biggestNumber})`)
 }
 
 
@@ -222,7 +224,6 @@ function calculateBiggestDecrease() {
     greatestIncrease = false
     dataDisplayed = false
   }
-  console.log(`The Greatest Decrease is: ${smallestMonth} ($${smallestNumber})`)
 }
 
 
