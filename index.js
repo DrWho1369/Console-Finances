@@ -151,6 +151,7 @@ displayEl.addEventListener("click", function() {
 function calculateMonths() {
   let months = finances.length;
   resultsEl.textContent = `The total length of this finacial period is: ${months} months`
+  console.log(`The total length of this finacial period is: ${months} months`)
 }
 
 function calculateTotal() {
@@ -159,6 +160,7 @@ function calculateTotal() {
       totalDollars += finances[i][1];
     }
     resultsEl.textContent = `The total profit/loss over this period is $${totalDollars}`
+    console.log(`The total profit/loss over this period is $${totalDollars}`)
     totalCalculated = true
     averageCalculated = false
     greatestIncrease = false
@@ -173,6 +175,7 @@ function calculateAverage() {
     }
     averageChange = Math.round((changes / (finances.length - 1))*100)/100;
     resultsEl.textContent = `The average change over the financial period is $${averageChange}`;
+    console.log(`The average change over the financial period is $${averageChange}`)
     averageCalculated = true
     totalCalculated = false
     greatestIncrease = false
@@ -192,6 +195,7 @@ function calculateBiggestIncrease() {
       } 
     }  
     resultsEl.textContent = `The Greatest Increase is: ${biggestMonth} ($${biggestNumber})`;
+    console.log(`The Greatest Increase is: ${biggestMonth} ($${biggestNumber})`)
     greatestIncrease = true
     averageCalculated = false
     totalCalculated = false
@@ -210,6 +214,7 @@ function calculateBiggestDecrease() {
       } 
     }  
     resultsEl.textContent = `The Greatest Decrease is: ${smallestMonth} ($${smallestNumber})`;
+    console.log(`The Greatest Decrease is: ${smallestMonth} ($${smallestNumber})`)
     greatestDecrease = true
     averageCalculated = false
     totalCalculated = false
