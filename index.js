@@ -298,6 +298,10 @@ function displayDataSet() {
     dataDisplayed = false
     displayEl.textContent = "Display Dataset"
   }
-  
+  totalCalculated = false
+  averageCalculated = false
+  greatestIncrease = false
+  greatestDecrease = false
+  dataDisplayed = false
 }
 
