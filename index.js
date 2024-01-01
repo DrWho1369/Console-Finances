@@ -123,29 +123,71 @@ let dataDisplayed = false
 monthsEl.addEventListener("click", function() {
   calculateMonths();
   console.log(`The total length of this finacial period is: ${months} months`)
+  months = 0
+  totalDollars = 0
+  changes = 0
+  averageChange = 0
+  greatestIncreaseList = []
+  biggestNumber = 0
+  biggestMonth = ""
+  smallestNumber = 0
+  smallestMonth = ""
 })
 
 totalEl.addEventListener("click", function() {
   calculateTotal();
   console.log(`The total profit/loss over this period is $${totalDollars}`)
+  months = 0
   totalDollars = 0
+  changes = 0
+  averageChange = 0
+  greatestIncreaseList = []
+  biggestNumber = 0
+  biggestMonth = ""
+  smallestNumber = 0
+  smallestMonth = ""
 })
 
 averageEl.addEventListener("click", function() {
   calculateAverage();
   console.log(`The average change over the financial period is $${averageChange}`)
+  months = 0
+  totalDollars = 0
   changes = 0
   averageChange = 0
+  greatestIncreaseList = []
+  biggestNumber = 0
+  biggestMonth = ""
+  smallestNumber = 0
+  smallestMonth = ""
 })
 
 increaseEl.addEventListener("click", function() {
   calculateBiggestIncrease();
   console.log(`The Greatest Increase is: ${biggestMonth} ($${biggestNumber})`)
+  months = 0
+  totalDollars = 0
+  changes = 0
+  averageChange = 0
+  greatestIncreaseList = []
+  biggestNumber = 0
+  biggestMonth = ""
+  smallestNumber = 0
+  smallestMonth = ""
 })
 
 decreaseEl.addEventListener("click", function() {
   calculateBiggestDecrease();
   console.log(`The Greatest Decrease is: ${smallestMonth} ($${smallestNumber})`)
+  months = 0
+  totalDollars = 0
+  changes = 0
+  averageChange = 0
+  greatestIncreaseList = []
+  biggestNumber = 0
+  biggestMonth = ""
+  smallestNumber = 0
+  smallestMonth = ""
 })
 
 displayEl.addEventListener("click", function() {
