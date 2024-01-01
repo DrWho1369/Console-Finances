@@ -123,6 +123,7 @@ let dataDisplayed = false
 monthsEl.addEventListener("click", function() {
   calculateMonths();
   console.log(`The total length of this finacial period is: ${months} months`)
+  // Here we reset everything so the functions do not add ontop of themselves
   months = 0
   totalDollars = 0
   changes = 0
@@ -302,6 +303,5 @@ function displayDataSet() {
   averageCalculated = false
   greatestIncrease = false
   greatestDecrease = false
-  dataDisplayed = false
 }
 
