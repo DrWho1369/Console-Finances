@@ -192,6 +192,15 @@ decreaseEl.addEventListener("click", function() {
 
 displayEl.addEventListener("click", function() {
   displayDataSet()
+   months = 0
+  totalDollars = 0
+  changes = 0
+  averageChange = 0
+  greatestIncreaseList = []
+  biggestNumber = 0
+  biggestMonth = ""
+  smallestNumber = 0
+  smallestMonth = ""
 })
 
 //-------------------------------------------------------//
