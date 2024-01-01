@@ -128,14 +128,14 @@ monthsEl.addEventListener("click", function() {
 totalEl.addEventListener("click", function() {
   calculateTotal();
   console.log(`The total profit/loss over this period is $${totalDollars}`)
-  totalDollars = 
+  totalDollars = 0
 })
 
 averageEl.addEventListener("click", function() {
   calculateAverage();
   console.log(`The average change over the financial period is $${averageChange}`)
-  changes = 
-  averageChange = 
+  changes = 0
+  averageChange = 0
 })
 
 increaseEl.addEventListener("click", function() {
