@@ -160,13 +160,13 @@ function calculateTotal() {
       totalDollars += finances[i][1];
     }
     resultsEl.textContent = `The total profit/loss over this period is $${totalDollars}`
-    console.log(`The total profit/loss over this period is $${totalDollars}`)
     totalCalculated = true
     averageCalculated = false
     greatestIncrease = false
     greatestDecrease = false
     dataDisplayed = false
 }
+console.log(`The total profit/loss over this period is $${totalDollars}`)
 
 function calculateAverage() {
   if (averageCalculated === false) {
@@ -175,7 +175,6 @@ function calculateAverage() {
     }
     averageChange = Math.round((changes / (finances.length - 1))*100)/100;
     resultsEl.textContent = `The average change over the financial period is $${averageChange}`;
-    console.log(`The average change over the financial period is $${averageChange}`)
     averageCalculated = true
     totalCalculated = false
     greatestIncrease = false
@@ -183,7 +182,7 @@ function calculateAverage() {
     dataDisplayed = false
   }
 }
-
+console.log(`The average change over the financial period is $${averageChange}`)
 
 function calculateBiggestIncrease() {
   if (greatestIncrease === false) {
@@ -195,7 +194,6 @@ function calculateBiggestIncrease() {
       } 
     }  
     resultsEl.textContent = `The Greatest Increase is: ${biggestMonth} ($${biggestNumber})`;
-    console.log(`The Greatest Increase is: ${biggestMonth} ($${biggestNumber})`)
     greatestIncrease = true
     averageCalculated = false
     totalCalculated = false
@@ -203,6 +201,7 @@ function calculateBiggestIncrease() {
     dataDisplayed = false
   }
 }
+console.log(`The Greatest Increase is: ${biggestMonth} ($${biggestNumber})`)
 
 function calculateBiggestDecrease() {
   if (greatestDecrease === false) {
@@ -214,7 +213,6 @@ function calculateBiggestDecrease() {
       } 
     }  
     resultsEl.textContent = `The Greatest Decrease is: ${smallestMonth} ($${smallestNumber})`;
-    console.log(`The Greatest Decrease is: ${smallestMonth} ($${smallestNumber})`)
     greatestDecrease = true
     averageCalculated = false
     totalCalculated = false
@@ -222,6 +220,7 @@ function calculateBiggestDecrease() {
     dataDisplayed = false
   }
 }
+console.log(`The Greatest Decrease is: ${smallestMonth} ($${smallestNumber})`)
 
 function displayDataSet() {
   if (dataDisplayed === false) {
