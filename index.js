@@ -225,7 +225,6 @@ function calculateTotal() {
       totalDollars += finances[i][1];
     }
     resultsEl.textContent = `The total profit/loss over this period is $${totalDollars}`
-    totalCalculated = true
     averageCalculated = false
     greatestIncrease = false
     greatestDecrease = false
