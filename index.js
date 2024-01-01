@@ -165,8 +165,9 @@ function calculateTotal() {
     greatestIncrease = false
     greatestDecrease = false
     dataDisplayed = false
-}
-console.log(`The total profit/loss over this period is $${totalDollars}`)
+    console.log(`The total profit/loss over this period is $${totalDollars}`)
+  }
+
 
 function calculateAverage() {
   if (averageCalculated === false) {
@@ -181,8 +182,9 @@ function calculateAverage() {
     greatestDecrease = false
     dataDisplayed = false
   }
+  console.log(`The average change over the financial period is $${averageChange}`)
 }
-console.log(`The average change over the financial period is $${averageChange}`)
+
 
 function calculateBiggestIncrease() {
   if (greatestIncrease === false) {
@@ -200,8 +202,9 @@ function calculateBiggestIncrease() {
     greatestDecrease = false
     dataDisplayed = false
   }
+  console.log(`The Greatest Increase is: ${biggestMonth} ($${biggestNumber})`)
 }
-console.log(`The Greatest Increase is: ${biggestMonth} ($${biggestNumber})`)
+
 
 function calculateBiggestDecrease() {
   if (greatestDecrease === false) {
@@ -219,8 +222,9 @@ function calculateBiggestDecrease() {
     greatestIncrease = false
     dataDisplayed = false
   }
+  console.log(`The Greatest Decrease is: ${smallestMonth} ($${smallestNumber})`)
 }
-console.log(`The Greatest Decrease is: ${smallestMonth} ($${smallestNumber})`)
+
 
 function displayDataSet() {
   if (dataDisplayed === false) {
