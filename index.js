@@ -160,6 +160,10 @@ function calculateTotal() {
     }
     resultsEl.textContent = `The total profit/loss over this period is $${totalDollars}`
     totalCalculated = true
+    averageCalculated = false
+    greatestIncrease = false
+    greatestDecrease = false
+    dataDisplayed = false
 }
 
 function calculateAverage() {
@@ -170,6 +174,10 @@ function calculateAverage() {
     averageChange = Math.round((changes / (finances.length - 1))*100)/100;
     resultsEl.textContent = `The average change over the financial period is $${averageChange}`;
     averageCalculated = true
+    totalCalculated = false
+    greatestIncrease = false
+    greatestDecrease = false
+    dataDisplayed = false
   }
 }
 
@@ -185,6 +193,10 @@ function calculateBiggestIncrease() {
     }  
     resultsEl.textContent = `The Greatest Increase is: ${biggestMonth} ($${biggestNumber})`;
     greatestIncrease = true
+    averageCalculated = false
+    totalCalculated = false
+    greatestDecrease = false
+    dataDisplayed = false
   }
 }
 
@@ -198,7 +210,11 @@ function calculateBiggestDecrease() {
       } 
     }  
     resultsEl.textContent = `The Greatest Decrease is: ${smallestMonth} ($${smallestNumber})`;
-    greatestDecrease = True
+    greatestDecrease = true
+    averageCalculated = false
+    totalCalculated = false
+    greatestIncrease = false
+    dataDisplayed = false
   }
 }
 
